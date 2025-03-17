@@ -97,5 +97,4 @@ internal static class MinimalApiExtensions
 
         return app;
     }
-
 }

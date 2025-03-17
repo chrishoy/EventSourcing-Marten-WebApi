@@ -1,0 +1,62 @@
+@BaseAddress = https://localhost:7026
+
+# Create an Order
+POST {{BaseAddress}}/orders
+Accept: */*
+Content-Type: application/json 
+{
+  "productName": "A Product",
+  "deliveryAddress": "A Delivery Address"
+}
+###
+
+# Get ALL Orders (using projections)
+GET {{BaseAddress}}/orders
+Accept: application/json
+###
+
+# Get Order by ID (using projections)
+GET {{BaseAddress}}/orders/12a89a16-dd45-4e2c-b670-c64524925e5f
+Accept: application/json
+###
+
+# Change Address event
+POST {{BaseAddress}}/orders/12a89a16-dd45-4e2c-b670-c64524925e5f/address/
+Accept: */*
+Content-Type: application/json 
+{
+  "deliveryAddress": "An updated delivery address"
+}
+###
+
+# Dispatched event
+POST {{BaseAddress}}/orders/12a89a16-dd45-4e2c-b670-c64524925e5f/dispatch/
+Accept: */*
+Content-Type: application/json 
+{
+  "dispatchedAtUtc": "2025-03-17T18:23:14.007Z"
+}
+###
+
+# Out for delivery event
+POST {{BaseAddress}}/orders/12a89a16-dd45-4e2c-b670-c64524925e5f/out-for-delivery/
+Accept: */*
+Content-Type: application/json 
+{
+  "outForDeliveryAtUtc": "2025-03-17T18:23:15.007Z"
+}
+###
+
+# Delivered event
+POST {{BaseAddress}}/orders/12a89a16-dd45-4e2c-b670-c64524925e5f/delivered/
+Accept: */*
+Content-Type: application/json 
+{
+  "deliveredAtUtc": "2025-03-17T18:23:16.007Z"
+}
+###
+
+# Simple WeatherForecast request
+GET {{BaseAddress}}/WeatherForecast
+Accept: application/json
+###
