@@ -1,9 +1,7 @@
 using EventSourcingMartenWebApi;
 using Marten;
 using Marten.Events.Projections;
-using Marten.Linq.Parsing.Operators;
 using Weasel.Core;
-using static EventSourcingMartenWebApi.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
