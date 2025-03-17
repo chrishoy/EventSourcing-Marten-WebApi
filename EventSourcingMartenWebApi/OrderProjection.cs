@@ -5,7 +5,7 @@ namespace EventSourcingMartenWebApi;
 public class OrderProjection: SingleStreamProjection<Order>
 {
     public Order Create(Events.OrderCreated created) =>
-        new Order(created.Id, created.ProductName, created.DeliveryAddress, null, null, null, null);
+        new Order(created.Id, created.ProductName, created.DeliveryAddress, null, null, null);
 
     public void Apply(Events.OrderAddressUpdated addressUpdated, Order order) =>
         order = order with
