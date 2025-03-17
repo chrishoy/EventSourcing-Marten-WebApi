@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcingMartenWebApi", "EventSourcingMartenWebApi\EventSourcingMartenWebApi.csproj", "{11020A7D-5720-4BFF-BA03-7B7A85D24F2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{B977A0F4-E608-4164-A696-C229248FEE6F}"
+	ProjectSection(SolutionItems) = preProject
+		EventSourcingMartenWebApi\docker-compose.yml = EventSourcingMartenWebApi\docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11020A7D-5720-4BFF-BA03-7B7A85D24F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11020A7D-5720-4BFF-BA03-7B7A85D24F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11020A7D-5720-4BFF-BA03-7B7A85D24F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11020A7D-5720-4BFF-BA03-7B7A85D24F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

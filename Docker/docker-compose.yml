@@ -1,0 +1,19 @@
+services:
+  postgresdb:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: postgres_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
+    driver: local
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "D:/Docker/Volumes/Postgresql/data"
