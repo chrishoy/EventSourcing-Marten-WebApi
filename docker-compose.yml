@@ -1,3 +1,4 @@
+# Description: Docker compose file for PostgreSQL database
 services:
   postgresdb:
     image: postgres:latest
